@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import axios from 'axios'
 
-function Drivers() {
+function Teams() {
     const [Teams, setTeams] = useState([])
 
     useEffect(() => {
@@ -24,4 +24,4 @@ function Drivers() {
   )
 }
 
-export default Drivers
+export default Teams

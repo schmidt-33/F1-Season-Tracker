@@ -20,9 +20,8 @@
   color: rgb(220, 6, 6);
 }
 
-.navbar .links {
+.navbar .nav-links {
   margin-left: auto;
-  color: white;
 }
 
 .navbar a {
@@ -30,4 +29,17 @@
   text-decoration: none;
   padding: 6px;
   color: white;
+}
+
+.navbar a:hover {
+  color:red;
+  text-decoration: underline;
+}
+
+.standing-links {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.standing-links a {
+  margin-left: 15px;
 }

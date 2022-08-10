@@ -30,20 +30,4 @@ function Races() {
 }
 export default Races
 
-	// axios.get('https://jsonplaceholder.typicode.com/posts')
-	// 		.then(response => {
-    //     		//const races = response.data races.MRData.RaceTable.Races
-	// 			console.log(response)
-				
-	// 		})
-	// 		.catch(error => {
-	// 			console.log(error)
-	// 		})
-  	// }
 	
-	
-	//let rounds:any = []
-	// rounds.push(races.MRData.RaceTable.Races)
-	// 			rounds.map((round: any) => {
-	// 				console.log(rounds)
-	// 			})http://ergast.com/api/f1/current.json

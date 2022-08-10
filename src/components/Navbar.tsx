@@ -5,10 +5,9 @@ function Navbar() {
   return (
     <nav className='navbar'>
         <h1>F1 Paddock Tracker</h1>
-        <div className='links'>
+        <div className='nav-links'>
             <Link to='/races'>Races</Link>
-            <Link to='/drivers'>Drivers</Link>
-            <Link to='/teams'>Teams</Link>
+            <Link to='/standings'>Standings</Link>
         </div>
     </nav>
   )

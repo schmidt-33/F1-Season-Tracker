@@ -5,6 +5,7 @@ import Races from './components/Races';
 import Navbar from './components/Navbar';
 import Drivers from './components/Drivers';
 import Teams from './components/Teams'
+import Standings from './components/Standings';
 
 function App() {
   return (
@@ -13,12 +14,8 @@ function App() {
       <div className='content'>
         <Routes>
           <Route path="/races" element={<Races />} />
-
-          <Route path="/drivers" element={<Drivers />} />
-
-          <Route path="/teams" element={<Teams />} />
+          <Route path="/standings/*" element={<Standings />} />
         </Routes>
-        
       </div>
     </div>
   );
