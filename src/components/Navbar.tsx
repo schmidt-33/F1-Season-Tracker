@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 function Navbar() {
   return (
     <nav className='navbar'>
         <h1>F1 Paddock Tracker</h1>
         <div className='nav-links'>
-            <Link to='/races'>Races</Link>
-            <Link to='/standings'>Standings</Link>
+            <NavLink to='/races'>Races</NavLink>
+            <NavLink to='/standings/drivers'>Standings</NavLink>
         </div>
     </nav>
   )

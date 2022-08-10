@@ -36,10 +36,17 @@
   text-decoration: underline;
 }
 
+.navbar a.active {
+  color:red;
+  text-decoration: underline;
+}
 .standing-links {
   margin-top: 25px;
   margin-bottom: 25px;
 }
 .standing-links a {
   margin-left: 15px;
+}
+.standing-links a.active {
+  color: red;
 }
