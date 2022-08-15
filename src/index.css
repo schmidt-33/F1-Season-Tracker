@@ -44,12 +44,16 @@
   text-decoration: underline;
 }
 .standing-links {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 .standing-links a {
-  margin-left: 15px;
+  font-size: 24px;
+  margin-left: 50px;
+  text-decoration: none;
 }
 .standing-links a.active {
-  color: red;
+  text-decoration: underline red;
 }
