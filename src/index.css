@@ -23,31 +23,27 @@
   background-color: black;
   margin: auto;
 }
-.navbar h1 {
-  
+.navbar a{
   color: rgb(220, 6, 6);
+  text-decoration: none;
 }
 
-.navbar .nav-links {
 
-}
-
-.navbar a {
+.navbar .nav-links a {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
   color: white;
 }
-
-.navbar a:hover {
+.navbar .nav-links a:hover {
+  color:red;
+  text-decoration: underline;
+}
+.navbar .nav-links a.active {
   color:red;
   text-decoration: underline;
 }
 
-.navbar a.active {
-  color:red;
-  text-decoration: underline;
-}
 .standing-links {
   display: flex;
   justify-content: center;
