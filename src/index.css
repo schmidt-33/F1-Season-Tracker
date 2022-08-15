@@ -6,16 +6,19 @@
   color: rgb(0, 0, 0)
 }
 
-.navbar {
+.background {
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 1000px;
+  
   margin: 0 auto;
-  border-style: dotted;
   background-color: black;
 }
 
+.navbar {
+  width: 1000px;
+  background-color: black;
+}
 .navbar h1 {
   color: rgb(220, 6, 6);
 }
