@@ -10,21 +10,26 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  
+  justify-content: center;
   margin: 0 auto;
   background-color: black;
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 1000px;
   background-color: black;
+  margin: auto;
 }
 .navbar h1 {
+  
   color: rgb(220, 6, 6);
 }
 
 .navbar .nav-links {
-  margin-left: auto;
+
 }
 
 .navbar a {
