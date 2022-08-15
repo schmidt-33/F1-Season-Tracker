@@ -8,7 +8,7 @@ function Navbar() {
         <h1>F1 Paddock Tracker</h1>
         <div className='nav-links'>
             <NavLink to='/races'>Races</NavLink>
-            <NavLink to='/standings/'>Standings</NavLink>
+            <NavLink to='/standings'>Standings</NavLink>
         </div>
       </div>
     </nav>

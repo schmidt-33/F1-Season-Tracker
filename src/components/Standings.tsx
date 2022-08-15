@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { Routes, Route, Link, NavLink, Navigate } from 'react-router-dom';
 import Teams from './Teams';
 import Drivers from './Drivers';
 
@@ -13,6 +13,7 @@ function Standings() {
     <Routes>
         <Route path="drivers" element={<Drivers />} />
         <Route path="teams" element={<Teams />} />
+        <Route path="" element={<Navigate to="/standings/drivers" replace />} />
     </Routes>
     </div>
   )
