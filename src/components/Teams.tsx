@@ -5,10 +5,10 @@ function Teams() {
 	const [Teams, setTeams] = useState([])
 
 	useEffect(() => {
-		axios.get('http://ergast.com/api/f1/current/constructors.json')
+		axios.get('http://ergast.com/api/f1/current/constructorstandings.json')
 			.then(res => {
-				console.log(res.data.MRData.ConstructorTable.Constructors)
-				setTeams(res.data.MRData.ConstructorTable.Constructors)
+				console.log(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
+				setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
 			})
 			.catch(err => {
 				console.log(err)
@@ -16,12 +16,22 @@ function Teams() {
 	}, [])
 
 	return (
-		<div>
+		<div className="standing-container">
 			{
-				Teams.map(team => <div key={team.constructorId}> {team.name} </div>)
+				Teams.map(team =>
+					<div key={team.position} className={`${team.Constructor.constructorId} standing-line`}>
+						<div>
+							{team.Constructor.name}
+						</div>
+						<div>
+							{team.points}
+						</div>
+					</div>
+				)
 			}
 		</div>
 	)
 }
 
 export default Teams
+
