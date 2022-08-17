@@ -3,8 +3,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Races from './components/Races';
 import Navbar from './components/Navbar';
-import Drivers from './components/Drivers';
-import Teams from './components/Teams'
 import Standings from './components/Standings';
 
 function App() {
