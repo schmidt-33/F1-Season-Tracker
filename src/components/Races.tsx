@@ -22,8 +22,5 @@ function Races() {
 			}
 		</div>
 	)
-
-
-
 }
 export default Races
