@@ -1,10 +1,10 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 function Teams() {
-    const [Teams, setTeams] = useState([])
+	const [Teams, setTeams] = useState([])
 
-    useEffect(() => {
+	useEffect(() => {
 		axios.get('http://ergast.com/api/f1/current/constructors.json')
 			.then(res => {
 				console.log(res.data.MRData.ConstructorTable.Constructors)
@@ -15,13 +15,13 @@ function Teams() {
 			})
 	}, [])
 
-  return (
-    <div>
-	    {
-		    Teams.map(team => <div key={team.constructorId}> {team.name} </div>)
-		}
-	</div>
-  )
+	return (
+		<div>
+			{
+				Teams.map(team => <div key={team.constructorId}> {team.name} </div>)
+			}
+		</div>
+	)
 }
 
 export default Teams
