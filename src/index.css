@@ -5,10 +5,12 @@
   font-family: 'Saira';
 
 }
-.content{
+
+.content {
   display: flex;
   justify-content: center;
 }
+
 .background {
   padding: 20px;
   display: flex;
@@ -74,6 +76,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
 .standing-line {
   width: 500px;
   height: 40px;
@@ -84,25 +87,25 @@
   padding-right: 10px;
 }
 
-.red_bull{
+.red_bull {
   background-color: #0600EF;
   color: white;
   font-weight: bold;
 }
 
-.mercedes{
+.mercedes {
   background-color: #00D2BE;
   color: white;
   font-weight: bold;
 }
 
-.mclaren{
+.mclaren {
   background-color: #FF8700;
   color: white;
   font-weight: bold;
 }
 
-.alpine{
+.alpine {
   background-color: #0090FF;
   color: white;
   font-weight: bold;
@@ -142,4 +145,8 @@
   background-color: #005AFF;
   color: white;
   font-weight: bold;
+}
+
+.race-container{
+  display: flex;
 }

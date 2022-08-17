@@ -5,7 +5,7 @@ function Teams() {
 	const [Teams, setTeams] = useState([])
 
 	useEffect(() => {
-		axios.get('http://ergast.com/api/f1/current/constructorstandings.json')
+		axios.get('https://ergast.com/api/f1/current/constructorstandings.json')
 			.then(res => {
 				console.log(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
 				setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)

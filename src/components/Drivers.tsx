@@ -8,7 +8,7 @@ function Drivers() {
 
 	//get the information of the driver standings and set it to Drivers array
 	useEffect(() => {
-		axios.get('http://ergast.com/api/f1/current/driverstandings.json')
+		axios.get('https://ergast.com/api/f1/current/driverstandings.json')
 			.then(res => {
 				console.log(res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
 				setDrivers(res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
