@@ -3,9 +3,12 @@
 * {
   margin: 0;
   font-family: 'Saira';
-  color: rgb(0, 0, 0)
-}
 
+}
+.content{
+  display: flex;
+  justify-content: center;
+}
 .background {
   padding: 20px;
   display: flex;
@@ -62,4 +65,81 @@
 
 .standing-links a.active {
   text-decoration: underline red;
+}
+
+.standing-container {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.standing-line {
+  width: 500px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.red_bull{
+  background-color: #0600EF;
+  color: white;
+  font-weight: bold;
+}
+
+.mercedes{
+  background-color: #00D2BE;
+  color: white;
+  font-weight: bold;
+}
+
+.mclaren{
+  background-color: #FF8700;
+  color: white;
+  font-weight: bold;
+}
+
+.alpine{
+  background-color: #0090FF;
+  color: white;
+  font-weight: bold;
+}
+
+.ferrari {
+  background-color: #DC0000;
+  color: white;
+  font-weight: bold;
+}
+
+.alphatauri {
+  background-color: #2B4562;
+  color: white;
+  font-weight: bold;
+}
+
+.alfa {
+  background-color: #900000;
+  color: white;
+  font-weight: bold;
+}
+
+.haas {
+  background-color: #FFFFFF;
+  color: black;
+  font-weight: bold;
+}
+
+.aston_martin {
+  background-color: #006F62;
+  color: white;
+  font-weight: bold;
+}
+
+.williams {
+  background-color: #005AFF;
+  color: white;
+  font-weight: bold;
 }
