@@ -6,7 +6,7 @@ function Navbar() {
     <nav className='background'>
       <div className='navbar'>
         <h1>
-          <Link to="/">F1 Paddock Tracker</Link>
+          <Link to="/">F1 Season Tracker</Link>
         </h1>
         <div className='nav-links'>
             <NavLink to='/races'>Races</NavLink>
