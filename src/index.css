@@ -88,6 +88,14 @@
   padding-right: 10px;
 }
 
+.standing-line:first-child {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.standing-line:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+
 .red_bull {
   background-color: #0600EF;
   color: white;
