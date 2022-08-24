@@ -9,7 +9,7 @@
 .content {
   display: flex;
   justify-content: center;
-  background-color: rgb(80, 80, 80);
+
 }
 
 .background {
@@ -70,11 +70,14 @@
   background-color: red;
   padding:1rem;
   border-radius: 1rem;
-  
+  outline-style: solid;
+  outline-width: 0.2rem;
+  outline-color: black;
 }
 
 .standing-links a.active {
   text-decoration: underline black;
+  text-underline-offset: 0.5rem;
 }
 
 .standing-container {
@@ -95,17 +98,10 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 1rem 1rem 1rem 1rem;
-  margin-top: 0.5rem;
-}
-
-.standing-line:first-child {
-  
-}
-
-
-
-.standing-line:last-child {
-
+  margin-top: 0.5rem; 
+  outline-style: solid;
+  outline-width: 0.2rem;
+  outline-color: black;
 }
 
 .red_bull {
@@ -148,6 +144,7 @@
   background-color: #900000;
   color: white;
   font-weight: bold;
+
 }
 
 .haas {
