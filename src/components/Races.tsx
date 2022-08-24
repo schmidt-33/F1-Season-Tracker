@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 //map for country codes to display flags
@@ -43,9 +44,12 @@ function Races() {
 		<div>
 			{
 				Rounds.map(round => 
-					<div className='race-container'>
-						<span className={`fi fi-${countryCodes.get(round.Circuit.Location.country)}`}/><div key={round.round}> {round.raceName} </div>
-					</div>)
+					<Link to={round.round} key={round.round}>
+						<div className='race-container' >
+							<span className={`fi fi-${countryCodes.get(round.Circuit.Location.country)}`}/>
+							<div> {round.raceName} </div>
+						</div>
+					</Link>)
 			}
 		</div>
 	)

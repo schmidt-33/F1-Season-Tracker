@@ -4,6 +4,7 @@ import './App.css';
 import Races from './components/Races';
 import Navbar from './components/Navbar';
 import Standings from './components/Standings';
+import RaceDetails from './components/RaceDetails';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/races" element={<Races />} />
           <Route path="/standings/*" element={<Standings />} />
+          <Route path='/races/:raceId' element={<RaceDetails/>} />
         </Routes>
       </div>
     </div>
