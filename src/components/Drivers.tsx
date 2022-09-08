@@ -17,7 +17,6 @@ function Drivers() {
 			})
 	}, [])
 
-	console.log(Drivers)
 	return (
 			<div className="standing-container">
 				{
@@ -35,16 +34,5 @@ function Drivers() {
 			</div>
 	)
 }
-
-// //convert team names with _ to - for class name usage
-// function nameConversion(teamName) {
-// 	let team = teamName
-
-// 	for(let i = 0; i < team; i++){
-// 		if(team[i] == "_")
-// 			team[i] = "-"
-// 		return team
-// 	}
-// }
 
 export default Drivers
