@@ -1,30 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import RaceCard from './RaceCard'
 
 //map for country codes to display flags
-let countryCodes = new Map<string, string>([
-	['Bahrain', 'bh'],
-	['Saudi Arabia', 'sa'],
-	['Australia', 'au'],
-	['Italy', 'it'],
-	['USA', 'us'],
-	['Spain', 'es'],
-	['Monaco', 'mc'],
-	['Azerbaijan', 'az'],
-	['Canada', 'ca'],
-	['UK', 'gb'],
-	['Austria', 'at'],
-	['France', 'fr'],
-	['Hungary', 'hu'],
-	['Belgium', 'be'],
-	['Netherlands', 'nl'],
-	['Singapore', 'sg'],
-	['Japan', 'jp'],
-	['Mexico', 'mx'],
-	['Brazil', 'br'],
-	['UAE', 'ae']
-])
+
 
 function Races() {
 	const [Rounds, setRounds] = useState([])
@@ -32,7 +12,6 @@ function Races() {
 	useEffect(() => {
 		axios.get('https://ergast.com/api/f1/current.json')
 			.then(res => {
-				console.log(res.data.MRData.RaceTable.Races)
 				setRounds(res.data.MRData.RaceTable.Races)
 			})
 			.catch(err => {
@@ -45,10 +24,7 @@ function Races() {
 			{
 				Rounds.map(round => 
 					<Link to={round.round} key={round.round}>
-						<div className='race-container' >
-							<span className={`fi fi-${countryCodes.get(round.Circuit.Location.country)}`}/>
-							<div> {round.raceName} </div>
-						</div>
+						<RaceCard round={round} />
 					</Link>)
 			}
 		</div>
