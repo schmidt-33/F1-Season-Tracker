@@ -24,7 +24,7 @@ function Races() {
 			{
 				Rounds.map(round => 
 					<Link to={round.round} key={round.round}>
-						<RaceCard round={round} />
+						<RaceCard race={round} />
 					</Link>)
 			}
 		</div>
