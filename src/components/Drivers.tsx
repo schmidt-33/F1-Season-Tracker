@@ -10,9 +10,7 @@ function Drivers() {
 	useEffect(() => {
 		axios.get('https://ergast.com/api/f1/current/driverstandings.json')
 			.then(res => {
-				console.log(res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
 				setDrivers(res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
-				
 			})
 			.catch(err => {
 				console.log(err)
