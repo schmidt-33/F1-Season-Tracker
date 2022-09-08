@@ -18,11 +18,10 @@ function Races() {
 				console.log(err)
 			})
 	}, [])
-
 	return (
 		<div>
 			{
-				Rounds.map(round => 
+				Rounds.map(round =>
 					<Link to={round.round} key={round.round}>
 						<RaceCard race={round} />
 					</Link>)
