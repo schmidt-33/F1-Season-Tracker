@@ -1,5 +1,7 @@
 import React from 'react'
+import '../css/raceCard.css'
 
+//flag codes for all countries on the calendar
 let countryCodes = new Map<string, string>([
 	['Bahrain', 'bh'],
 	['Saudi Arabia', 'sa'],
@@ -23,14 +25,36 @@ let countryCodes = new Map<string, string>([
 	['UAE', 'ae']
 ])
 
+
 function RaceCard(round) {
-  
-  return (
-    <div className='race-container' >
-      <span className={`fi fi-${countryCodes.get(round.race.Circuit.Location.country)}`} />
-      <div> {round.race.raceName} </div>
-    </div>
-  )
+	if (round.race.ThirdPractice) {
+		return (
+			<div className='race-card' >
+				<span className={`fi fi-${countryCodes.get(round.race.Circuit.Location.country)}`} />
+				<div> {round.race.raceName} </div>
+				<div> FP1: {round.race.FirstPractice.time}</div>
+				<div> FP2: {round.race.SecondPractice.time}</div>
+				<div> FP3: {round.race.ThirdPractice.time}</div>
+				<div> Q: {round.race.Qualifying.time} </div>
+				<div> Race: {round.race.time} </div>
+			</div>
+		)
+	}
+
+	if (round.race.Sprint) {
+		return (
+			<div className='race-card' >
+				<span className={`fi fi-${countryCodes.get(round.race.Circuit.Location.country)}`} />
+				<div> {round.race.raceName} </div>
+				<div> FP1: {round.race.FirstPractice.time}</div>
+				<div> FP2: {round.race.SecondPractice.time}</div>
+				<div> Sprint: {round.race.Sprint.time}</div>
+				<div> Q: {round.race.Qualifying.time} </div>
+				<div> Race: {round.race.time} </div>
+			</div>
+		)
+	}
+
 }
 
 export default RaceCard

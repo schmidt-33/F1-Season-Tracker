@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import '../css/raceCard.css'
 import RaceCard from './RaceCard'
 
 //map for country codes to display flags
@@ -19,7 +20,7 @@ function Races() {
 			})
 	}, [])
 	return (
-		<div>
+		<div className='race-container'>
 			{
 				Rounds.map(round =>
 					<Link to={round.round} key={round.round}>
