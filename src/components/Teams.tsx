@@ -4,15 +4,15 @@ import axios from 'axios'
 function Teams() {
 	const [Teams, setTeams] = useState([])
 
-	useEffect(() => {
-		axios.get('https://ergast.com/api/f1/current/constructorstandings.json')
-			.then(res => {
-				setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
-			})
-			.catch(err => {
-				console.log(err)
-			})
-	}, [])
+
+	axios.get('https://ergast.com/api/f1/current/constructorstandings.json')
+		.then(res => {
+			setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+
 
 	return (
 		<div className="standing-container">
