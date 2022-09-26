@@ -18,7 +18,7 @@
     outline-style: solid;
     outline-width: 0.2rem;
     outline-color: black;
-    -webkit-border-radius: 1rem;
+    transform: translateZ(0)
   }
   
   .standing-links a.active {
@@ -48,7 +48,7 @@
     outline-style: solid;
     outline-width: 0.2rem;
     outline-color: black;
-    -webkit-border-radius: 1rem;
+    transform: translateZ(0)
   }
   
   .red_bull {
