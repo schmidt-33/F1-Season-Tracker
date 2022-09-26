@@ -32,6 +32,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 5rem;
+    overflow: hidden;
   }
   
   .standing-line {
