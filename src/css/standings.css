@@ -18,6 +18,7 @@
     outline-style: solid;
     outline-width: 0.2rem;
     outline-color: black;
+    -webkit-border-radius: 1rem;
   }
   
   .standing-links a.active {
@@ -32,7 +33,6 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 5rem;
-    overflow: hidden;
   }
   
   .standing-line {
@@ -48,6 +48,7 @@
     outline-style: solid;
     outline-width: 0.2rem;
     outline-color: black;
+    -webkit-border-radius: 1rem;
   }
   
   .red_bull {
