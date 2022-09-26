@@ -16,3 +16,7 @@
     border-radius: 0.4rem;
     margin: 20px
 }
+
+.session-name {
+    font-weight: bold;
+}
