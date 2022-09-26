@@ -18,6 +18,7 @@
     outline-style: solid;
     outline-width: 0.2rem;
     outline-color: black;
+    overflow: hidden;
     transform: translateZ(0)
   }
   
@@ -48,6 +49,7 @@
     outline-style: solid;
     outline-width: 0.2rem;
     outline-color: black;
+    overflow: hidden;
     transform: translateZ(0)
   }
   
