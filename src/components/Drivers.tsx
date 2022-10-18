@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
-function Drivers() {
+function Drivers(year) {
 	const [Drivers, setDrivers] = useState([])
-	const team = 'teamcolor'
 
+	const driverStandingsCall = 'https://ergast.com/api/f1/' + year.year + '/driverstandings.json'
 	//get the information of the driver standings and set it to Drivers array
-	axios.get('https://ergast.com/api/f1/current/driverstandings.json')
+	axios.get(driverStandingsCall)
 		.then(res => {
 			setDrivers(res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
 		})

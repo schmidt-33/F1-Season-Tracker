@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-function Teams() {
+function Teams(year) {
 	const [Teams, setTeams] = useState([])
 
-
-	axios.get('https://ergast.com/api/f1/current/constructorstandings.json')
+	const teamStandingsCall = 'https://ergast.com/api/f1/' + year.year + '/constructorstandings.json'
+	console.log(teamStandingsCall)
+	axios.get(teamStandingsCall)
 		.then(res => {
 			setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
 		})
