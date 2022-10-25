@@ -11,6 +11,11 @@ function Standings() {
     setYear(event.target.value)
   }
 
+  let seasons:Array<Number> = []; //setup and populate an array for all seasons
+  for(let i = 2022; i >= 1958; i--){
+    seasons.push(i)
+  }
+
   return (
     <div>
       <div className='standing-links'>
@@ -18,11 +23,12 @@ function Standings() {
         <NavLink to='teams'>Teams</NavLink>
       </div>
       <select onChange={changeYearHandler}>
-        <option value="2022">2022</option>
-        <option value="2021">2021</option>
-        <option value="2020">2020</option>
-        <option value="2019">2019</option>
-        <option value="2018">2018</option>
+            {seasons.map(season => (
+              <option value={season.toString()}>
+                {season.toString()}
+              </option>
+            ))}
+
       </select>
       <Routes>
         <Route path="drivers" element={<Drivers year={year}/>} />

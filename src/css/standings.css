@@ -56,7 +56,7 @@
   }
   
   .mercedes {
-    background-color: #00D2BE;
+    background-color: #00A19B;
     color: white;
     font-weight: bold;
   }
@@ -68,7 +68,7 @@
   }
   
   .alpine {
-    background-color: #0090FF;
+    background-color: #2173B8;
     color: white;
     font-weight: bold;
   }
@@ -106,6 +106,36 @@
   
   .williams {
     background-color: #005AFF;
+    color: white;
+    font-weight: bold;
+  }
+
+  .racing_point {
+    background-color: #F363B9;
+    color: white;
+    font-weight: bold;
+  }
+
+  .renault {
+    background-color: #FFF500;
+    color: black;
+    font-weight: bold;
+  }
+
+  .toro_rosso {
+    background-color: #469BFF;
+    color: black;
+    font-weight: bold;
+  }
+
+  .force_india {
+    background-color: #00A85C;
+    color: white;
+    font-weight: bold;
+  }
+
+  .sauber {
+    background-color: #DE3126;
     color: white;
     font-weight: bold;
   }
