@@ -5,7 +5,7 @@ function Teams(year) {
 	const [Teams, setTeams] = useState([])
 
 	const teamStandingsCall = 'https://ergast.com/api/f1/' + year.year + '/constructorstandings.json'
-	console.log(teamStandingsCall)
+	
 	axios.get(teamStandingsCall)
 		.then(res => {
 			setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
