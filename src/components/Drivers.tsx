@@ -7,14 +7,15 @@ function Drivers(year) {
 
 	const driverStandingsCall = 'https://ergast.com/api/f1/' + year.year + '/driverstandings.json'
 	//get the information of the driver standings and set it to Drivers array
-	axios.get(driverStandingsCall)
-		.then(res => {
-			setDrivers(res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
-		})
-		.catch(err => {
-			console.log(err)
-		})
-
+	useEffect(() => {
+		axios.get(driverStandingsCall)
+			.then(res => {
+				setDrivers(res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
+			})
+			.catch(err => {
+				console.log(err)
+			})
+	}, [year])
 
 	return (
 		<div className="standing-container">

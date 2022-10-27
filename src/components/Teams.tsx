@@ -5,15 +5,16 @@ function Teams(year) {
 	const [Teams, setTeams] = useState([])
 
 	const teamStandingsCall = 'https://ergast.com/api/f1/' + year.year + '/constructorstandings.json'
-	
-	axios.get(teamStandingsCall)
-		.then(res => {
-			setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
-		})
-		.catch(err => {
-			console.log(err)
-		})
 
+	useEffect(() => {
+		axios.get(teamStandingsCall)
+			.then(res => {
+				setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
+			})
+			.catch(err => {
+				console.log(err)
+			})
+	}, [year])
 
 	return (
 		<div className="standing-container">
