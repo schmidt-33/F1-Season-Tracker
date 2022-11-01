@@ -1,30 +1,73 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import axios from 'axios'
+import { useParams, useLocation } from 'react-router-dom'
 
+type RaceInfo = {
+  season?: string,
+  round?: string,
+  url?: string,
+  raceName?: string,
+  Circuit?: {
+    circuitId: string,
+    url: string,
+    circuitName: string,
+    Location: {
+      lat: string,
+      long: string,
+      locality: string,
+      country: string
+    }
+  },
+  date?: string,
+  time?: string,
+  FirstPractice?: {
+    date: string,
+    time: string
+  },
+  SecondPractice?: {
+    date: string,
+    time: string
+  },
+  ThirdPractice?: {
+    date: string,
+    time: string
+  },
+  Sprint?: {
+    date: string,
+    time: string
+  },
+  Qualifying?: {
+    date: string,
+    time: string
+  }
+}
 function RaceDetails() {
-  const [Race, setRace] = useState([])
-
   const params = useParams()
-  const raceId = params.raceId
-
+  const location = useLocation()
+  const raceInfo:any = location.state
+  const today = new Date()
+  let raceOver: boolean = false
 
   useEffect(() => {
-    axios.get(`https://ergast.com/api/f1/current/${raceId}.json`)
-      .then(res => {
-        setRace(res.data.MRData.RaceTable.Races)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    console.log(raceInfo)
   }, [])
 
-  console.log(Race)
-  return (
-    <div> {Race.map(race => (
-      race.raceName
-    ))} </div>
-  )
+
+  //check to see if the race has happened to show results
+  if (new Date(raceInfo.date) < today) {
+    raceOver = true
+  }
+
+  if (raceOver) {
+    return (
+      <div>{raceInfo.raceName} is over</div>
+    )
+  }
+  else {
+    return (
+      <div>{raceInfo.raceName} has not happened</div>
+    )
+  }
+
 }
 
 export default RaceDetails

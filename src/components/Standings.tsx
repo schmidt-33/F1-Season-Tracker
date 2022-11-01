@@ -10,8 +10,9 @@ function Standings() {
   const changeYearHandler = (event) => {
     setYear(event.target.value)
   }
-
-  let seasons:Array<Number> = []; //setup and populate an array for all seasons
+  
+  //setup and populate an array for all seasons
+  let seasons:Array<Number> = []; 
   for(let i = 2022; i >= 1958; i--){
     seasons.push(i)
   }
@@ -24,7 +25,7 @@ function Standings() {
       </div>
       <select onChange={changeYearHandler}>
             {seasons.map(season => (
-              <option value={season.toString()}>
+              <option key={season.toString()} value={season.toString()}>
                 {season.toString()}
               </option>
             ))}

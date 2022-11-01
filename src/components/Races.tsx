@@ -4,29 +4,26 @@ import axios from 'axios'
 import '../css/raceCard.css'
 import RaceCard from './RaceCard'
 
-//map for country codes to display flags
-
-
 function Races() {
 	const [Rounds, setRounds] = useState([])
 
 	useEffect(() => {
-		axios.get('https://ergast.com/api/f1/current.json')
-			.then(res => {
-				setRounds(res.data.MRData.RaceTable.Races)
-			})
-			.catch(err => {
-				console.log(err)
-			})
+axios.get('https://ergast.com/api/f1/current.json')
+		.then(res => {
+			setRounds(res.data.MRData.RaceTable.Races)
+		})
+		.catch(err => {
+			console.log(err)
+		})
 	}, [])
-
+	
 
 	return (
 		<div className='race-container'>
 			{
 				Rounds.map(round =>
-					<Link to={round.round} key={round.round}>
-						<RaceCard race={round} />
+					<Link to={round.round} key={round.round} state={round}>
+						<RaceCard race={round}/>
 					</Link>)
 			}
 		</div>
