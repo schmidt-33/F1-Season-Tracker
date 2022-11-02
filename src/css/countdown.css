@@ -1,0 +1,21 @@
+.countdown-container {
+    font-size: 2em;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 25vw;
+    min-height: 20vh;
+    padding:0 1rem;
+}
+.time-frame {
+    display: flex;
+    flex-direction: column
+    
+}
+
+.time-frame .digit {
+    font-size: 3em;
+    font-weight: 1000;
+}
+

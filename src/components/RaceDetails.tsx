@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { getRemainingTime } from '../Utils/CountdownTimerUtils'
 import Countdown from './Countdown'
 
 function RaceDetails() {
@@ -20,11 +19,12 @@ function RaceDetails() {
     )
   }
   else {
+    //make timestamp for when the race starts to countdown to 
     let raceDate = Date.parse(raceInfo.date + ' ' + raceInfo.time)
   
     return (
       // Need to send the timestamp for race in the Countdownn component
-      <div>{raceInfo.raceName} has not happened
+      <div>
         <Countdown countdownTimeStamp={raceDate}/>
       </div>
 
