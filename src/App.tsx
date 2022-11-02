@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import './App.css';
 import Races from './components/Races';
 import Navbar from './components/Navbar';
@@ -14,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/races" element={<Races />} />
           <Route path="/standings/*" element={<Standings />} />
-          <Route path='/races/:raceId' element={<RaceDetails/>} />
+          <Route path='/races/:raceId' element={<RaceDetails />} />
+          <Route path="" element={<Navigate to="/standings" replace />} />
         </Routes>
       </div>
     </div>
