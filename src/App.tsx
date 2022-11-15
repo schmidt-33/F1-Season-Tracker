@@ -15,7 +15,7 @@ function App() {
           <Route path="/races" element={<Races />} />
           <Route path="/standings/*" element={<Standings />} />
           <Route path='/races/:raceId' element={<RaceDetails />} />
-          <Route path="" element={<Navigate to="/standings" replace />} />
+          <Route path="" element={<Navigate to="/races" replace />} />
         </Routes>
       </div>
     </div>
