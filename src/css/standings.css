@@ -15,9 +15,9 @@
     background-color: red;
     padding:1rem;
     border-radius: 1rem;
-    outline-style: solid;
-    outline-width: 0.2rem;
-    outline-color: black;
+    border-style: solid;
+    border-width: 0.2rem;
+    border-color: black;
   }
   
   .standing-links a.active {
@@ -32,6 +32,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 5rem;
+    margin-top: 2rem;
   }
   
   .standing-line {
@@ -43,10 +44,10 @@
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 1rem 1rem 1rem 1rem;
-    margin-top: 0.5rem; 
-    outline-style: solid;
-    outline-width: 0.2rem;
-    outline-color: black;
+    margin-top: 1px; 
+    border-style: solid;
+    border-width: 0.2rem;
+    border-color: black;
   }
   
   .red_bull {

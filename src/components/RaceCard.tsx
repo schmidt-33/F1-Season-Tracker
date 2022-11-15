@@ -37,6 +37,7 @@ function RaceCard(round) {
 	const raceTime = new Date(round.race.date + " " + round.race.time)
 	//fp3 and sprint times have to be done in there respectibe if statements as not every race has them
 
+	//retrun for a race with FP3
 	if (round.race.ThirdPractice) {
 
 		const fp3Time = new Date(round.race.ThirdPractice.date + " " + round.race.ThirdPractice.time)
@@ -54,6 +55,7 @@ function RaceCard(round) {
 		)
 	}
 
+	//return for a race with a sprint
 	if (round.race.Sprint) {
 
 		const sprintTime = new Date(round.race.Sprint.date + " " + round.race.Sprint.time)

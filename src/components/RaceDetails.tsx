@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import CompletedRace from './CompletedRace'
 import Countdown from './Countdown'
 
 function RaceDetails() {
@@ -15,7 +16,7 @@ function RaceDetails() {
 
   if (raceOver) {
     return (
-      <div>{raceInfo.raceName} is over</div>
+      <CompletedRace round={raceInfo.round}/>
     )
   }
   else {
@@ -24,10 +25,7 @@ function RaceDetails() {
   
     return (
       // Need to send the timestamp for race in the Countdownn component
-      <div>
         <Countdown countdownTimeStamp={raceDate}/>
-      </div>
-
     )
   }
 
