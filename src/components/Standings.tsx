@@ -6,7 +6,7 @@ import '../css/standings.css'
 import { currentYear } from '../Utils/SeasonYear';
 
 function Standings() {
-  const [year, setYear] = useState("2022");
+  const [year, setYear] = useState(currentYear.toString());
   useEffect(()=>{},[year])
   const changeYearHandler = (event) => {
     setYear(event.target.value)
