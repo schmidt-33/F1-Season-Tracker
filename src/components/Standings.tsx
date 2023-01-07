@@ -3,6 +3,7 @@ import { Routes, Route, Link, NavLink, Navigate } from 'react-router-dom';
 import Teams from './Teams';
 import Drivers from './Drivers';
 import '../css/standings.css'
+import { currentYear } from '../Utils/SeasonYear';
 
 function Standings() {
   const [year, setYear] = useState("2022");
@@ -13,7 +14,7 @@ function Standings() {
   
   //setup and populate an array for all seasons
   let seasons:Array<Number> = []; 
-  for(let i = 2022; i >= 1958; i--){
+  for(let i = currentYear; i >= 1958; i--){
     seasons.push(i)
   }
 
