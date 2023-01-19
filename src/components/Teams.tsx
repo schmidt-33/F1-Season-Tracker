@@ -9,19 +9,13 @@ function Teams(year) {
   useEffect(() => {
     axios.get(teamStandingsCall)
       .then((res) => {
-        if (res.data.MRData.StandingsTable.StandingsLists.length > 0) {
           setTeams(res.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings);
-        } 
-		else {
-          setTeams([]);
-        }
       })
       .catch((err) => {
         console.log(err);
       });
   }, [year]);
 
-  if (Teams.length > 0) {
     return (
       <div className="standing-container">
         {Teams.map((team) => (
@@ -35,9 +29,6 @@ function Teams(year) {
         ))}
       </div>
     );
-  } else {
-    return <div>The season hasn not started yet </div>;
-  }
 }
 
 export default Teams;

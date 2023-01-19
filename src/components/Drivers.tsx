@@ -11,20 +11,16 @@ function Drivers(year) {
     axios
       .get(driverStandingsCall)
       .then((res) => {
-        if (res.data.MRData.StandingsTable.StandingsLists.length > 0) {
           setDrivers(
             res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings
           );
-        } else {
-          setDrivers([]);
-        }
       })
       .catch((err) => {
         console.log(err);
       });
   }, [year]);
 
-  if (Drivers.length > 0) {
+  
     return (
       <div className="standing-container">
         {Drivers.map((driver) => (
@@ -40,13 +36,6 @@ function Drivers(year) {
         ))}
       </div>
     );
-  }
-
-  else {
-	return(
-		<div>The season has not started yet</div>
-	)
-  }
 }
 
 export default Drivers;
