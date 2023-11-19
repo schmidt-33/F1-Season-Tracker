@@ -4,6 +4,7 @@ import '../css/standings.css'
 
 function CompletedRace(prop) {
   let round = prop.round
+  console.log(round)
   const [results, setResults] = useState([])
 
   useEffect(() => {

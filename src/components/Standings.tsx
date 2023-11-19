@@ -3,10 +3,10 @@ import { Routes, Route, Link, NavLink, Navigate } from 'react-router-dom';
 import Teams from './Teams';
 import Drivers from './Drivers';
 import '../css/standings.css'
-import { currentYear } from '../Utils/SeasonYear';
+import { currentYearStandings } from '../Utils/SeasonYear';
 
 function Standings() {
-  const [year, setYear] = useState(currentYear.toString());
+  const [year, setYear] = useState(currentYearStandings.toString());
   useEffect(()=>{},[year])
   const changeYearHandler = (event) => {
     setYear(event.target.value)
@@ -14,7 +14,7 @@ function Standings() {
   
   //setup and populate an array for all seasons
   let seasons:Array<Number> = []; 
-  for(let i = currentYear; i >= 1958; i--){
+  for(let i = currentYearStandings; i >= 1958; i--){
     seasons.push(i)
   }
 
