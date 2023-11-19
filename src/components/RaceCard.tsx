@@ -8,7 +8,6 @@ let countryCodes = new Map<string, string>([
 	['Australia', 'au'],
 	['Italy', 'it'],
 	['USA', 'us'],
-	['United States', 'us'],
 	['Spain', 'es'],
 	['Monaco', 'mc'],
 	['Azerbaijan', 'az'],
@@ -21,7 +20,6 @@ let countryCodes = new Map<string, string>([
 	['Netherlands', 'nl'],
 	['Singapore', 'sg'],
 	['Japan', 'jp'],
-	['Qatar', 'qa'],
 	['Mexico', 'mx'],
 	['Brazil', 'br'],
 	['UAE', 'ae']
@@ -31,7 +29,6 @@ let countryCodes = new Map<string, string>([
 function RaceCard(round) {
 
 	const raceName = round.race.raceName
-	const todayDate = new Date()
 
 	//convert times from UTC to respective time zone
 	const fp1Time = new Date(round.race.FirstPractice.date + " " + round.race.FirstPractice.time)
@@ -39,8 +36,6 @@ function RaceCard(round) {
 	const qualiTime = new Date(round.race.Qualifying.date + " " + round.race.Qualifying.time)
 	const raceTime = new Date(round.race.date + " " + round.race.time)
 	//fp3 and sprint times have to be done in there respectibe if statements as not every race has them
-
-	const weekend = round.race.date
 
 	//retrun for a race with FP3
 	if (round.race.ThirdPractice) {
@@ -51,12 +46,11 @@ function RaceCard(round) {
 			<div className='race-card' >
 				<span className={`fi fi-${countryCodes.get(round.race.Circuit.Location.country)}`} />
 				<div> {raceName} </div>
-				<div> {weekend}</div>
-				<div> <span className='session-name'>FP1: </span> {todayDate < fp1Time ? fp1Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span> }</div>
-				<div> <span className='session-name'>FP2: </span> {todayDate < fp2Time ? fp2Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>}</div>
-				<div> <span className='session-name'>FP3: </span> {todayDate < fp3Time ? fp3Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>}</div>
-				<div> <span className='session-name'>Q: </span> {todayDate < qualiTime ? qualiTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>} </div>
-				<div> <span className='session-name'>Race: </span> {todayDate < raceTime ? raceTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>} </div>
+				<div> <span className='session-name'>FP1: </span> {fp1Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})}</div>
+				<div> <span className='session-name'>FP2: </span> {fp2Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})}</div>
+				<div> <span className='session-name'>FP3: </span> {fp3Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})}</div>
+				<div> <span className='session-name'>Q: </span> {qualiTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})} </div>
+				<div> <span className='session-name'>Race: </span> {raceTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})} </div>
 			</div>
 		)
 	}
@@ -70,11 +64,11 @@ function RaceCard(round) {
 			<div className='race-card' >
 				<span className={`fi fi-${countryCodes.get(round.race.Circuit.Location.country)}`} />
 				<div> {raceName} </div>
-				<div> <span className='session-name'>FP1: </span> {todayDate < fp1Time ? fp1Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>}</div>
-				<div> <span className='session-name'>FP2: </span> {todayDate < fp2Time ? fp2Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>}</div>
-				<div> <span className='session-name'>Sprint: </span> {todayDate < sprintTime ? sprintTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>}</div>
-				<div> <span className='session-name'>Q: </span> {todayDate < qualiTime ? qualiTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>} </div>
-				<div> <span className='session-name'>Race: </span> {todayDate < raceTime ? raceTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'}) : <span>&#x2705;</span>} </div>
+				<div> <span className='session-name'>FP1: </span> {fp1Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})}</div>
+				<div> <span className='session-name'>FP2: </span> {fp2Time.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})}</div>
+				<div> <span className='session-name'>Sprint: </span> {sprintTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})}</div>
+				<div> <span className='session-name'>Q: </span> {qualiTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})} </div>
+				<div> <span className='session-name'>Race: </span> {raceTime.toLocaleTimeString([], {hour:'numeric', minute:'numeric'})} </div>
 			</div>
 		)
 	}
